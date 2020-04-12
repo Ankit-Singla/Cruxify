@@ -3,13 +3,14 @@
   "description": "Pastes all that is copied in a chrome browsing session into a textarea",
   "version": "1.0",
   "manifest_version": 2,
+  "content_security_policy": "default-src 'self'; script-src 'self' 'sha256-5yfkvfNlf9HXmO3NawmdbgkvhXPLomYVRYOnRrug80Y='",
   "browser_action": {
     "default_popup": "popup.html"
   },
   "background": {
-    "persistent": true
+    "persistent": true,
+    "page": "background.html"
   },
-  "background_page": "background.html",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5yfkvfNlf9HXmO3NawmdbgkvhXPLomYVRYOnRrug80Y='">
 <head>
 	<title>Cruxify</title>
 </head>
 <body>
 	<textarea id="crux"></textarea>
 </body>
-
-<script type="text/javascript">
-	var crux = document.getElementById('crux');
-	crux.value = chrome.extension.getBackgroundPage().document.getElementById('crux').value;
-</script>
+<script src="index.js"></script>
 </html>
