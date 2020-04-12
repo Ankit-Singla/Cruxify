@@ -1,0 +1,22 @@
+{
+  "name": "Cruxify",
+  "description": "Pastes all that is copied in a chrome browsing session into a textarea",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "persistent": true
+  },
+  "background_page": "background.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["oncopy.js"]
+    }
+  ],
+  "permissions": [
+    "clipboardRead"
+  ]
+}
