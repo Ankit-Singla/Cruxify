@@ -5,9 +5,15 @@ chrome.extension.onMessage.addListener(
 			clipboardAccessor.focus();
 			document.execCommand('paste');
 			var copiedText = clipboardAccessor.value;
+			// log
+			console.log("copied text: "+copiedText);
 
 			var crux = document.getElementById('crux');
-			crux.value += crux.value + copiedText;
+			crux.value += (copiedText+"\n");
+			//log
+			console.log("crux value: "+crux.value);
+
+			clipboardAccessor.value = "";
 		}
 		sendResponse({}); // synchronous [use "return true;" to asynchronously send response]
 	}
