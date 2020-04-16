@@ -16,5 +16,4 @@ function download(filename, text) {
 
 document.getElementById("download-button").addEventListener("click", function(){
     download('crux.txt', crux.value);
-    window.close();
 }, false);
