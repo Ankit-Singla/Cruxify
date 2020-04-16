@@ -3,11 +3,11 @@ crux.value = chrome.extension.getBackgroundPage().document.getElementById('crux'
 
 var win = window;
 
-document.getElementById("download-button").addEventListener("click", function() {
+chrome.downloads.setShelfEnabled(false);
 
+document.getElementById("download-button").addEventListener("click", function() {
 	var blob = new Blob([crux.value], {type: "text/plain"});
 	var url = URL.createObjectURL(blob);
-
 	console.log('url: '+url);
 
 	chrome.downloads.download({
@@ -20,4 +20,5 @@ document.getElementById("download-button").addEventListener("click", function() 
 chrome.downloads.onChanged.addListener(function (downloadDelta) {
 	crux.value = '';
 	win.close();
+	chrome.downloads.setShelfEnabled(true);
 });
