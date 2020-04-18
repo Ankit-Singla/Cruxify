@@ -7,6 +7,7 @@ chrome.extension.onMessage.addListener(
 			var previousPaste = clipboardAccessor.value;
 			clipboardAccessor.value = "";
 
+			// records clipboard contents inside clipboardAccessor
 			clipboardAccessor.focus();
 			document.execCommand('paste');
 			var copiedText = clipboardAccessor.value;
@@ -16,6 +17,7 @@ chrome.extension.onMessage.addListener(
 				return true;
 			}
 
+			// update the crux
 			var crux = document.getElementById('crux');
 			crux.value += (copiedText+"\n");
 		}
