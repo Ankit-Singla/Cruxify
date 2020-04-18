@@ -5,6 +5,7 @@
   "manifest_version": 2,
   "content_security_policy": "default-src 'self'; script-src 'self' 'sha256-5yfkvfNlf9HXmO3NawmdbgkvhXPLomYVRYOnRrug80Y='",
   "browser_action": {
+    "default_icon": "cruxify-icon.png",
     "default_popup": "popup.html"
   },
   "background": {

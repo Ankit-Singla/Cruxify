@@ -4,11 +4,24 @@ body {
 	text-align: center;
 }
 
+header {
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: auto;
+}
+
 h1 {
-	color: blue;
+	color: rgba(100, 100, 200, 0.9);
 	text-align: center;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-size: 30px;
+	display: inline;
+}
+
+img {
+	height: 38px;
 }
 
 #crux {
@@ -20,7 +33,7 @@ h1 {
 
 #download-button {
 	color: white;
-	background-color: blue;
+	background-color: rgba(100, 100, 200, 0.9);
 	width: 100%;
 	padding-top: 4%;
 	padding-bottom: 4%;
