@@ -31,3 +31,8 @@ chrome.downloads.onChanged.addListener(function (downloadDelta) {
 	// enables the download shelf for future downloads
 	chrome.downloads.setShelfEnabled(true);
 });
+
+// crux change event sends a message to background script to record manual changes to crux by the user
+crux.addEventListener('change', function() {
+	chrome.extension.sendMessage({event: "cruxChange", data: crux.value});
+});

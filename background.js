@@ -1,6 +1,9 @@
 chrome.extension.onMessage.addListener(
 	function(request, sender, sendResponse) {
-		if (request.event == "copy") {
+		var crux = document.getElementById('crux');
+
+		// handles copy event from content script
+		if(request.event == "copy") {
 			var clipboardAccessor = document.getElementById('clip');
 			
 			// prevents accidentally copying the same piece of text twice
@@ -18,9 +21,12 @@ chrome.extension.onMessage.addListener(
 			}
 
 			// update the crux
-			var crux = document.getElementById('crux');
 			crux.value += (copiedText+"\n");
+
+		} else if(request.event == "cruxChange") { // handles crux change event from popup
+			crux.value = request.data; // to record manual changes made to the crux by user
 		}
+
 		sendResponse({});
 	}
 );
