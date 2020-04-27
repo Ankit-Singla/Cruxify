@@ -13,7 +13,7 @@ header {
 }
 
 h1 {
-	color: rgba(100, 100, 200, 0.9);
+	color: rgba(58, 152, 213, 1);
 	text-align: center;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-size: 30px;
@@ -29,11 +29,13 @@ img {
 	height: 300px;
 	resize: none;
 	font-size: 14px;
+	border: 1px solid rgba(70, 100, 130, 1);
+	color: rgba(100, 70, 30, 1);
 }
 
 #download-button {
 	color: white;
-	background-color: rgba(100, 100, 200, 0.9);
+	background-color: rgba(58, 152, 213, 1);
 	width: 100%;
 	padding-top: 4%;
 	padding-bottom: 4%;
