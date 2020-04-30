@@ -1,7 +1,7 @@
 {
   "name": "Cruxify",
-  "description": "Pastes all that is copied in a chrome browsing session into a textarea",
-  "version": "1.0",
+  "description": "Cruxify your documents.\nRead. Copy. Repeat. Download.",
+  "version": "1.1",
   "manifest_version": 2,
   "content_security_policy": "default-src 'self'; script-src 'self' 'sha256-5yfkvfNlf9HXmO3NawmdbgkvhXPLomYVRYOnRrug80Y='",
   "icons": {
