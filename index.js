@@ -22,14 +22,18 @@ document.getElementById("download-button").addEventListener("click", function() 
 
 // either download was successful or was interrupted
 chrome.downloads.onChanged.addListener(function (downloadDelta) {
-	chrome.extension.getBackgroundPage().document.getElementById('crux').value = '';
-	
-	// clears the crux and shuts the popup window
-	crux.value = '';
-	win.close();
-
 	// enables the download shelf for future downloads
 	chrome.downloads.setShelfEnabled(true);
+
+	// download has completed successfully
+	if(downloadDelta.state.current == "complete") {
+		// clear the crux value stored in the background page
+		chrome.extension.getBackgroundPage().document.getElementById('crux').value = '';
+
+		// clears the crux and shuts the popup window
+		crux.value = '';
+		win.close();
+	}
 });
 
 // crux change event sends a message to background script to record manual changes to crux by the user
