@@ -1,7 +1,7 @@
 {
-  "name": "Cruxify",
-  "description": "Cruxify your documents.\nRead. Copy. Repeat. Download.",
-  "version": "1.1",
+  "name": "Cruxify: Productivity and Note-taking",
+  "description": "Cruxify your documents or Take notes.\nJust Read. Copy. Download.",
+  "version": "1.2.1",
   "manifest_version": 2,
   "content_security_policy": "default-src 'self'; script-src 'self' 'sha256-5yfkvfNlf9HXmO3NawmdbgkvhXPLomYVRYOnRrug80Y='",
   "icons": {
